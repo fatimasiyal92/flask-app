@@ -38,8 +38,8 @@ pipeline {
             steps {
                 sh '''
                 cd /var/lib/jenkins/workspace/Flask-App-Blue-Green/BlueGreen
-                docker-compose -f docker-compose-green.yml pull
-                docker-compose -f docker-compose-green.yml up -d web_green
+                docker compose -f docker-compose-green.yml pull
+                docker compose -f docker-compose-green.yml up -d web_green
                 '''
             }
         }
